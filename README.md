@@ -1,40 +1,149 @@
 # DevLink Discord Bot
 
-Um bot simples para Discord usando Node.js.
+[English](#english) | [Português](#português) | [Español](#español)
 
-## Link de Convite do Bot
+## Português
 
-Use este link para convidar o bot para seu servidor (substitua YOUR_CLIENT_ID pelo ID do seu bot):
-```
-https://discord.com/api/oauth2/authorize?client_id=1331027082691477575&permissions=8&scope=bot%20applications.commands
-```
+Um bot Discord avançado para gerenciamento de comunidades de jogos e lives.
 
-## Configuração
+### 🚀 Funcionalidades
 
-1. Instale as dependências:
+- Sistema completo de gerenciamento de canais
+- Estrutura organizada para comunidades gaming
+- Suporte a lives e streaming
+- Sistema de administração
+- Comandos personalizados
+
+### 📋 Pré-requisitos
+
+- Node.js 16.x ou superior
+- NPM
+- Uma aplicação Discord registrada
+
+### ⚙️ Configuração
+
+1. Clone o repositório
+2. Instale as dependências:
 ```bash
 npm install
 ```
 
-2. Configure o arquivo `.env`:
-- Copie as seguintes informações do [Discord Developer Portal](https://discord.com/developers/applications):
-  - `DISCORD_TOKEN`: O token do seu bot
-  - `CLIENT_ID`: O ID do seu aplicativo (Application ID)
-  - `GUILD_ID`: O ID do servidor onde você vai testar o bot
+3. Configure o arquivo `.env`:
+```env
+DISCORD_TOKEN=seu_token_aqui
+CLIENT_ID=seu_client_id_aqui
+GUILD_ID=id_do_servidor_aqui
+```
 
-Para obter essas informações:
-1. Crie um aplicativo em https://discord.com/developers/applications
-2. Na seção "Bot", crie um bot e copie o token
-3. Na seção "General Information", copie o Application ID (Client ID)
-4. Para obter o Guild ID, ative o modo desenvolvedor no Discord (Configurações > Avançado > Modo Desenvolvedor) e clique com botão direito no servidor para copiar o ID
+### 🎮 Comandos
 
-## Como executar
+- `/setup` - Configura os canais do servidor (apenas administradores)
+- `/ping` - Verifica a latência do bot
 
-Para iniciar o bot em modo desenvolvimento:
+### 🚀 Executando
+
 ```bash
 npm run dev
 ```
 
-## Comandos disponíveis
+---
 
-- `/ping`: Responde com "Pong! 🏓" # dev_link
+## English
+
+An advanced Discord bot for managing gaming and streaming communities.
+
+### 🚀 Features
+
+- Complete channel management system
+- Organized structure for gaming communities
+- Live streaming support
+- Administration system
+- Custom commands
+
+### 📋 Prerequisites
+
+- Node.js 16.x or higher
+- NPM
+- A registered Discord application
+
+### ⚙️ Setup
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Configure the `.env` file:
+```env
+DISCORD_TOKEN=your_token_here
+CLIENT_ID=your_client_id_here
+GUILD_ID=server_id_here
+```
+
+### 🎮 Commands
+
+- `/setup` - Configures server channels (admin only)
+- `/ping` - Checks bot latency
+
+### 🚀 Running
+
+```bash
+npm run dev
+```
+
+---
+
+## Español
+
+Un bot de Discord avanzado para gestionar comunidades de juegos y streaming.
+
+### 🚀 Características
+
+- Sistema completo de gestión de canales
+- Estructura organizada para comunidades gaming
+- Soporte para transmisiones en vivo
+- Sistema de administración
+- Comandos personalizados
+
+### 📋 Requisitos previos
+
+- Node.js 16.x o superior
+- NPM
+- Una aplicación Discord registrada
+
+### ⚙️ Configuración
+
+1. Clona el repositorio
+2. Instala las dependencias:
+```bash
+npm install
+```
+
+3. Configura el archivo `.env`:
+```env
+DISCORD_TOKEN=tu_token_aquí
+CLIENT_ID=tu_client_id_aquí
+GUILD_ID=id_del_servidor_aquí
+```
+
+### 🎮 Comandos
+
+- `/setup` - Configura los canales del servidor (solo administradores)
+- `/ping` - Verifica la latencia del bot
+
+### 🚀 Ejecutando
+
+```bash
+npm run dev
+```
+
+---
+
+## 📝 Licença / License / Licencia
+
+Este projeto está sob a licença MIT com restrições - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+This project is under the MIT License with restrictions - see the [LICENSE](LICENSE) file for details.
+
+Este proyecto está bajo la Licencia MIT con restricciones - vea el archivo [LICENSE](LICENSE) para más detalles.
