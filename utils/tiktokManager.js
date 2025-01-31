@@ -1,4 +1,4 @@
-const { WebcastPushConnection } = require('tiktok-live-connector');
+const { WebcastPushConnection } = require('tiktok-live-client');
 const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
@@ -32,21 +32,17 @@ class TikTokManager {
 
     async connectToTikTok(config) {
         try {
-            if (this.connections.has(config.tiktokUsername)) {
-                return;
-            }
-
             const tiktokConnection = new WebcastPushConnection(config.tiktokUsername);
 
             // Eventos da live
-            tiktokConnection.on('streamStart', async (data) => {
-                if (!this.isLive.get(config.tiktokUsername)) {
-                    this.isLive.set(config.tiktokUsername, true);
-                    await this.sendLiveNotification(config, data);
-                }
+            tiktokConnection.on('streamStart', () => {
+                console.log(`${config.tiktokUsername} iniciou uma live!`);
+                this.isLive.set(config.tiktokUsername, true);
+                this.sendLiveNotification(config);
             });
 
             tiktokConnection.on('streamEnd', () => {
+                console.log(`${config.tiktokUsername} encerrou a live!`);
                 this.isLive.set(config.tiktokUsername, false);
             });
 
@@ -60,7 +56,7 @@ class TikTokManager {
         }
     }
 
-    async sendLiveNotification(config, streamData) {
+    async sendLiveNotification(config) {
         try {
             const channel = await this.client.channels.fetch(config.channelId);
             if (!channel) return;
